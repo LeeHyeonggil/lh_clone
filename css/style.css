@@ -321,6 +321,17 @@ video.vdo{
     position:absolute;
     z-index:10;
 }
+/* .circle-box::after{
+    content: "";
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 10px;
+    top: 103px;
+    left: 0;
+    position: absolute;
+    z-index: 3;
+} */
 .btnbox{
     width:15px;
     height:20px;
@@ -588,4 +599,32 @@ ul.d-submenu>li:last-child{
     font-size: 1.1em;
     font-weight: 500;
 }
+.card{
+    height: 100%;
+    padding: 4rem 3rem;
+    background: #F4F6F8;
+    border-radius: 1rem;
+    align-items: center;
+    transition: all .2s;
+}
+.card:hover{
+    display: flex;
+    transform: translateY(-2.5rem);
+    background: #2F5BC1;
+    box-shadow: 0 1rem 2rem rgba(47,91,193,.39);
+}
+.card-img{
+    width: 8.6rem;
+    height: 8.6rem;
+    border-radius: 100%;
+    overflow: hidden;
+    
+    flex-shrink: 0;
+}
+.card-body{
+    display: block;
+    padding-left: 1.7rem;
+    letter-spacing: -.05rem;
+}
+
 
