@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.12.4.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/scroll.js"></script>
 </head>
 <body>
    <div class="header-background"></div>
@@ -548,7 +549,7 @@
    
    <section id="new">
       <div class="container">
-         <div class="row justify-between">
+         <div class="row new-section justify-between animate__fadeInUp">
             <div>
                <h1 class="new-title">사람을 향한 <em>더 나은세상,</em><br>한국고지부택곰사</h1>
             </div>
@@ -562,11 +563,11 @@
                </div>
             </div>
          </div>
-         <div class="row">
+         <div class="row animate__fadeInUp animate__delay-1s">
             <div class="col-3">
                <div class="card">
                   <div class="card-img">
-                     <span><i class="ri-home-heart-line"></i></span>
+                     <i class="ri-home-heart-line"></i>
                   </div>
                   <div class="card-body">
                      
@@ -578,7 +579,7 @@
             <div class="col-3">
                <div class="card">
                   <div class="card-img">
-                     <span><i class="ri-home-heart-line"></i></span>
+                     <i class="ri-store-fill"></i>
                   </div>
                   <div class="card-body">
                      
@@ -590,7 +591,7 @@
             <div class="col-3">
                <div class="card">
                   <div class="card-img">
-                     <span><i class="ri-home-heart-line"></i></span>
+                     <i class="ri-home-heart-line"></i>
                   </div>
                   <div class="card-body">
                      
@@ -602,7 +603,7 @@
             <div class="col-3">
                <div class="card">
                   <div class="card-img">
-                     <span><i class="ri-home-heart-line"></i></span>
+                     <i class="ri-group-fill"></i>
                   </div>
                   <div class="card-body">
                    
@@ -612,11 +613,104 @@
                </div>
             </div>
          </div>
-         <div class="row">
-            <div class="col-7">7</div>
-            <div class="col-5">8</div>
+         <div class="row mt-50 animate__fadeInUp animate__delay-2s">
+            <div class="col-7">
+               <div class="notice">
+                  <div class="notice-title-box d-flex justify-between align-center">
+                     <h1>Notice</h1>
+                     <nav>
+                        <ul class="notice-nav">
+                           <li class="active"><a href="#">전체</a></li>
+                           <li class="nav-list"><a href="#">공지</a></li>
+                           <li class="nav-list"><a href="#">공모</a></li>
+                           <li class="nav-list"><a href="#">채용정보</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <ul class="notice-list">
+                     <li class="n"><a href="#"><span>공지</span></a> <a href="#">공지제16기 LH 기술심사평가위원 후보자 모집(정정)</a></li>
+                     <li class="m"><a href="#"><span>공모</span></a> <a href="#">광주산정 공공주택지구 도시건축통합계획 설계공모</a></li>
+                     <li class="n"><a href="#"><span>공지</span></a> <a href="#">[재공고]LH 기축임대주택 친환경자동차 인프라 설치 및 운영 민간</a></li>
+                     <li class="y"><a href="#"><span>채용</span></a> <a href="#">부도주택 매입 법무사 선정결과</a></li>
+                     <li class="n"><a href="#"><span>공지</span></a> <a href="#">제16기 LH 기술심사평가위원 후보자 모집 안내</a></li>
+                     <li class="y"><a href="#"><span>채용</span></a> <a href="#">LH 대구경북지역본부 기간제 근로자 채용 공고</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-5">
+               <div class="notice">
+                  <div class="banner-title">
+                     <h1>알림</h1>
+                     <div class="btns">
+                        <span class="count">1</span>/4
+                        <i class="ri-arrow-left-s-line"></i>
+                        <i class="ri-stop-fill playbtn"></i>
+                     <!--<i class="ri-play-fill playbtn"></i>-->
+                        <i class="ri-arrow-right-s-line"></i>
+                     </div>
+                  </div>
+                  <div class="banner">
+                     <div class="banner-in">
+                        <img src="images/001.png" alt="001">
+                        <img src="images/002.jpg" alt="002">
+                        <img src="images/003.jpg" alt="003">
+                        <img src="images/004.jpg" alt="004">
+                     </div>
+                  </div>
+               </div>
+               <div class="notice-service">
+                  <div class="service-title">
+                     <h1>LH콜센터</h1>
+                     <p>1600-1004</p>
+                  </div>
+                  <div class="service-time">
+                     <p>상담시간 : 09:00 ~ 18:00 (토, 일, 공휴일 제외)</p>
+                     <p>하자상담 : 1600 - 1004 (ARS 4), 1670 - 8572</p>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </section>
-</body>
-</html>
+   <div class="background-blue">
+      <section id="major">
+         <div class="container">
+            <div class="row">
+               <h1 class="new-title"><em>주요사업</em>안내<small>한국토지주택공사의 주요사업 정보를 안내합니다.</small></h1>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-8">
+               <div class="major-first">
+                   <div class="major-textbox">
+                      <h2><em>주거복지</em>사업</h2>
+                      <ul class="row">
+                          <li class="col-4"><a href="#">청년·신혼부부계층 임대주택</a></li>
+                          <li class="col-4"><a href="#">주거취약계층 임대주택</a></li>
+                          <li class="col-4"><a href="#">무주택 서민 임대주택</a></li>
+                          <li class="col-4"><a href="#">주거급여</a></li>
+                          <li class="col-4"><a href="#">공동주택관리 지원</a></li>
+                          <li class="col-4"><a href="#">공동주택 분쟁조정</a></li>
+                          <li class="col-4"><a href="#">희망상가</a></li>
+                      </ul>
+                   </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="major-second">
+                   <h2 class="tsf">토지사업</h2>
+                   <a href="#" class="circle">+</a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="major-third">
+                   <h2  class="tsf">주택사업</h2>
+                   <a href="#" class="circle">+</a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+   
+   </body>
+   </html>

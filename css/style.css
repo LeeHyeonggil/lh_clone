@@ -1,3 +1,4 @@
+/* @import url('reset.css'); */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css');
 @import url('fonts.css');
 @import url('animate.min.css');
@@ -23,6 +24,11 @@ a:hover{
     margin-left:auto;
     margin-right:auto;
 }
+h1 small{
+    font-size: 20px;
+    color: #666;
+    margin-left: 30px;
+}
 .justify-between{
     justify-content: space-between;
 }
@@ -37,6 +43,9 @@ section{
 }
 .d-flex{
     display: flex;
+}
+.mt-50{
+    margin-top: 50px;
 }
 /************** HEADER ***************/
 header{
@@ -54,7 +63,7 @@ header{
     height: 100px;
     background: #fff;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     border-bottom: 1px solid #ccc;
     display: none;
     box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
@@ -586,6 +595,10 @@ ul.d-submenu>li:last-child{
     }
     
 }
+.new-section>div{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .desc-text{
     width: 330px;
 }
@@ -599,32 +612,301 @@ ul.d-submenu>li:last-child{
     font-size: 1.1em;
     font-weight: 500;
 }
+
 .card{
-    height: 100%;
-    padding: 4rem 3rem;
-    background: #F4F6F8;
-    border-radius: 1rem;
-    align-items: center;
-    transition: all .2s;
+    background-color:#F4F6F8;
+    border-radius:8px;
+    padding:2em;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    transition: all 500ms;
 }
+
 .card:hover{
-    display: flex;
-    transform: translateY(-2.5rem);
-    background: #2F5BC1;
-    box-shadow: 0 1rem 2rem rgba(47,91,193,.39);
+    background-color:#2f5bc1;
+    color:#fff;
+    transform: translateY(-30px);
+    box-shadow: 0 10px 25px 0 rgba(27, 77, 199, 0.5);
 }
+.card:hover>.card-img{
+    background:#d4e0fc;
+}
+.card:hover .card-body h3::after{
+    width:100%;
+}
+
 .card-img{
-    width: 8.6rem;
-    height: 8.6rem;
-    border-radius: 100%;
-    overflow: hidden;
-    
-    flex-shrink: 0;
+    width:100px;
+    height:100px;
+    background-color:#fff;
+    border-radius:50%;
+    text-align:center;
+}
+.card-img i{
+    font-size:50px;
+    line-height:2em;
+    color:#2f5bc1;
 }
 .card-body{
-    display: block;
-    padding-left: 1.7rem;
-    letter-spacing: -.05rem;
+    width:calc(100% - 100px);
+    padding-left:15px;
 }
-
-
+.card-body h3, .card-body p{
+    margin:0;
+    padding:0;
+}
+.card-body p{
+    letter-spacing: -1.7px;
+}
+.card-body h3{
+    position:relative;
+    display:inline-block;
+    margin-bottom:3px;
+}
+.card-body h3::after{
+    content:"";
+    display:block;
+    width:0;
+    height:1px;
+    background-color:#fff;
+    bottom:0;
+    left:0;
+    position:absolute;
+    transition: all 500ms;
+}
+.notice{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+.notice h1, .notice p, .notice ul{
+    margin: 0;
+    padding: 0;
+}
+.notice-title-box h1{
+    font-size: 1.8em;
+}
+ul.notice-nav{
+    list-style: none;
+    display: flex;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+ul.notice-nav li{
+    cursor: pointer;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+}
+ul.notice-nav .nav-list::after{
+    content: "";
+    height: 15px;
+    width: 1px;
+    background: #ddd;
+    display: block;
+    transform: rotate(30deg);
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+.notice-nav li a{
+    position: relative;
+    display: inline-block;
+}
+.notice-nav li a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #16398B;
+    transform: scaleX(0);
+    transition: all .4s;
+}
+.notice-nav li.active a::after{
+    transform: scaleX(1);
+}
+.notice-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 2em;
+}
+.notice-list li{
+    padding: 15px 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.notice-list li:not(:last-child){
+    border-bottom: 1px dashed #ddd;
+}
+.notice-list span{
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+li.n span{
+    background: #dee8ff;
+}
+li.m span{
+    background: #ffe6a3;
+}
+li.y span{
+    background: #e5e5e5;
+}
+.notice-list li a:last-child:hover{
+    text-decoration: underline;
+}
+/*********  bannrt ************/
+.banner-title{
+    position: relative;
+    margin-bottom: 15px;
+}
+.btns{
+    position: absolute;
+    top: 0;
+    right: 0;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+.banner{
+    width: 504px;  
+    height: 209px;
+    overflow: hidden;
+    position: relative;  /*크기값을 줘서 오버팔로우 히든시키고 부모의 포지션을 고정, 자식에 엡솔루트 줌*/
+}
+.banner-in{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner-in img{
+    width: 504px;
+    float: left;
+}
+.btns i{
+    cursor: pointer;
+}
+.notice-service{
+    background: #ECF0F5;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 20px 20px;
+    display: flex;
+    height: 143px;
+}
+.notice-service h1,
+.notice-service p{
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.service-title{
+    width: 40%;
+}
+.service-title h1{
+    font-size: 1.5em;
+}
+.service-title p{
+    margin-top: 10px;
+    font-size: 1.7em;
+    font-weight: 500;
+    color: #2F5BC1;
+}
+.service-time{
+    width: 70%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    letter-spacing: -1px;
+    font-size: 1em;
+    font-weight: 430;
+}
+.service-time p{
+    margin-top: 10px;
+}
+/*****************배경 색상*******************/
+.background-blue{
+    background-color: #eff4ff;
+    margin-top: 500px;
+    position: relative;
+}
+/***************section major *************************/
+#major{
+    padding-left:40px;
+    padding-right:40px;
+    position:relative;
+    top: -500px;
+}
+.major-first, .major-second, .major-third{
+    height:500px;
+    border-radius:15px;
+    overflow:hidden;
+    background-size: cover;
+    position:relative;
+}
+.major-first {
+    background: url(../images/buildings-1850129_1920.jpg) no-repeat;
+}
+.major-second{
+    background: url(../images/architecture-2256489_1920.jpg) no-repeat center top;
+}
+.major-third{
+    background: url(../images/living-room-1835923_1920.jpg) no-repeat center bottom;
+}
+.major-textbox{
+    width:60%;
+    border-top-left-radius:0px;
+    border-top-right-radius:40px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius:15px;
+    background:#fff;
+    overflow:hidden;
+    height: 200px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    padding: 30px;
+}
+#major a.circle{
+    position:absolute;
+    left: calc(50% - 32.5px);
+    bottom: 65px;
+    display:block;
+    background:rgba(0,0,0,0.5);
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    text-align: center;
+    font-size:2em;
+    font-weight:400;
+    color:#fff;
+    line-height:65px;
+    transition:all 300ms;
+}
+#major a.circle:hover{
+    transform: rotateZ(360deg);
+}
+#major h2.tsf{
+    transform: rotateZ(270deg) translate(-40px);
+    color:#fff;
+}
+.major-textbox h2{
+   font-size:1.8em;
+}
+.major-textbox h2 em{
+    font-style:normal;
+    color:#2F5BC1;
+}
+.major-textbox ul{
+    margin:0;
+    padding:0;
+    list-style-position: inside;
+}
+.major-textbox ul li{
+    padding:0;
+    white-space: nowrap;
+    letter-spacing: -1px;
+}
